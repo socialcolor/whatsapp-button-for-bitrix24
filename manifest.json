@@ -1,0 +1,37 @@
+{
+	"manifest_version": 3,
+	"name": "Whatsapp Bitrix24",
+	"version": "1.0",
+	"author": "Gevork T.",
+	"description": "Button send whatsapp in bitrix24 deals",
+	"permissions": [
+		"activeTab",
+		"storage"
+	],
+	"icons": {
+		"16": "16.png",
+		"48": "48.png",
+		"128": "128.png"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"https://baby-comfort.bitrix24.ru/crm/deal/*"
+			],
+			"run_at": "document_end",
+			"js": [
+				"app.js"
+			]
+		}
+	],
+	"web_accessible_resources": [
+		{
+			"resources": [
+				"icon.svg"
+			],
+			"matches": [
+				"<all_urls>"
+			]
+		}
+	]
+}
